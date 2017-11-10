@@ -24,6 +24,7 @@ h3 {
 main {
     margin-left: 100px;
     margin-right: 100px;
+    margin-top: 20px;
 }
 
 .title {
@@ -45,4 +46,20 @@ th, td {
     th, td {
         font-size: 12px;
     }
+}
+
+.btn {
+    background-color: #407a56 !important;
+}
+
+.form {
+    background-color: #c9ced6;
+    padding: 20px 40px 40px;
+    border: 1px black ridge;
+}
+
+.form>h5 {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #407a56;
 }
