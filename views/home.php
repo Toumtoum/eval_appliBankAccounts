@@ -6,18 +6,19 @@
     <table class="striped">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Account Number</th>
+                <th>Account</th>
                 <th>Sold</th>
             </tr>
         </thead>
 
         <tbody>
+          <?php foreach ($accounts as $account) {
+            ?>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><?php echo $account->getName() ?></td>
+                <td><?php echo $account->getSold() ?></td>
             </tr>
+          <?php } ?>
         </tbody>
     </table>
 </main>

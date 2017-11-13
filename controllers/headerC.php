@@ -8,8 +8,9 @@ ob_start();
 
 session_start();
 
+// difine path of directory project
 
-define('PATH','/Applications/MAMP/htdocs/PHP/poo_phpSemaine7_evaluationBlanche/appli_handleVehicule');
+define('PATH','/Applications/MAMP/htdocs/PHP/Evaluation-2/appli_bankAccounts');
 
 // LOAD CLASS
 
@@ -31,9 +32,9 @@ require_once PATH .'/models/connectionDb.php';
 
 $db = connection();
 
-$manager = new accountsManager($db);
+$manager = new AccountsManager($db);
 
 
 // Include vue
 
-include PATH .'/vues/header.php';
+include PATH .'/views/header.php';
