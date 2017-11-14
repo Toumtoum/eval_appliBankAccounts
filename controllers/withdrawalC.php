@@ -17,6 +17,8 @@ if (isset($_POST['withdraw']) && !empty($_POST['from']) && !empty($_POST['amount
     $debitor->debit($_POST['amount']);
     $manager->update($debitor);
 
+    header('location:homeC.php');
+
   }
 
   else{
