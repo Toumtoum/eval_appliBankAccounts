@@ -55,7 +55,7 @@ class AccountsManager{
   public function deleteAccount(Accounts $account){
 
      $req=$this->_db->prepare('DELETE FROM accounts WHERE id = :id');
-     $req->execute(["id" => $article->getId()]);
+     $req->execute(["id" => $account->getId()]);
 
  }
 

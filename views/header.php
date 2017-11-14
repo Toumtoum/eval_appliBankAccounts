@@ -31,14 +31,14 @@
                     <li class="tab"><a href="addAccountC.php">ADD ACCOUNT</a></li>
                     <li class="tab"><a href="transferC.php">TRANSFER</a></li>
                     <li class="tab"><a href="">WITHDRAWAL</a></li>
-                    <li class="tab"><a href="">DELETE ACCOUNT</a></li>
+                    <li class="tab"><a href="deleteC.php">DELETE ACCOUNT</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="tab" class="active"><a href="homeC.php">HOME</a></li>
                     <li class="tab"><a href="addAccountC.php">ADD ACCOUNT</a></li>
                     <li class="tab"><a href="transferC.php">TRANSFER</a></li>
                     <li class="tab"><a href="">WITHDRAWAL</a></li>
-                    <li class="tab"><a href="">DELETE ACCOUNT</a></li>
+                    <li class="tab"><a href="deleteC.php">DELETE ACCOUNT</a></li>
                 </ul>
             </div>
         </nav>
