@@ -120,6 +120,10 @@ class Accounts{
 
     if ($amount < $this->sold){
     $this->sold -= $amount;
+    return $this;
+    }
+    else {
+      return false;
     }
 
   }

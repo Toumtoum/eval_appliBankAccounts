@@ -15,14 +15,20 @@ if (isset($_POST['withdraw']) && !empty($_POST['from']) && !empty($_POST['amount
     // create an instance of creditor object and update his Sold
     $debitor = $manager->getAccount($_POST['from']);
     $debitor->debit($_POST['amount']);
+    if ($debitor->debit($_POST['amount'])){
     $manager->update($debitor);
-
     header('location:homeC.php');
+    }
+    else {?>
+      <div class="error"><p>CHECK YOUR BALANCE</p></div>
+    <?php }
 
   }
 
   else{
-    echo "YOU MUST ENTER A VALIDE AMOUNT";
+    {?>
+      <div class="error"><p>YOU MUST ENTER A VALIDE AMOUNT</p></div>
+    <?php }
   }
 }
 
