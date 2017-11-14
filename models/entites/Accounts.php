@@ -108,4 +108,20 @@ class Accounts{
         return $this->sold;
     }
 
+// @@@@@@@@@@@@@@@@@@@@@ Methods  @@@@@@@@@@@@@@@@@@@@@@@
+
+  public function credit(int $amount){
+
+    $this->sold += $amount;
+
+  }
+
+  public function debit(int $amount){
+
+    if ($amount < $this->sold){
+    $this->sold -= $amount;
+    }
+
+  }
+
 }

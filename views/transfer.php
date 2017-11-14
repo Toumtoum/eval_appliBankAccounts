@@ -1,27 +1,33 @@
 <main>
     <div class="row form">
         <h5>TRANSFER</h5>
-        <form class="col s12">
+        <form class="col s12" method="post">
             <div class="input-field col s12">
-                <select>
-                      <option value="" disabled selected>Choose account</option>
-                      <option value=""></option>
+                <select name="from">
+                    <option value="" disabled selected>Choose account</option>
+                    <?php foreach ($accounts as $account) {
+                      ?>
+                    <option value="<?php echo $account->getId() ?>"><?php echo $account->getName() ." ". $account->getSold() . " euros"  ?></option>
+                    <?php } ?>
                 </select>
                 <label>FROM</label>
             </div>
             <div class="input-field col s12">
-                <select>
-                      <option value="" disabled selected>Choose account</option>
-                      <option value=""></option>
+                <select name="to">
+                    <option value="" disabled selected>Choose account</option>
+                    <?php foreach ($accounts as $account) {
+                      ?>
+                    <option value="<?php echo $account->getId() ?>"><?php echo $account->getName() ." ". $account->getSold() . " euros" ?></option>
+                    <?php } ?>
                 </select>
                 <label>TO</label>
             </div>
 
             <div class="input-field col s12">
-                <input placeholder="" id="accountNb" type="text" class="validate">
-                <label for="accountNb">AMOUNT</label>
+                <input placeholder="" id="amount" name="amount" type="text" class="validate">
+                <label for="amount">AMOUNT</label>
             </div>
-            <a type="sumit" name="create" class="waves-effect waves-light btn">TRANSFER</a>
+            <input type="submit" name="transfer" class="waves-effect waves-light btn" value="TRANSFER">
         </form>
     </div>
 </main>
