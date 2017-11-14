@@ -27,13 +27,15 @@
             <div class="nav-content">
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="tabs tabs-transparent hide-on-med-and-down">
-                    <li class="tab" class="active"><a href="">ADD ACCOUNT</a></li>
-                    <li class="tab"><a href="">TRANSFER</a></li>
+                  <li class="tab" class="active"><a href="homeC.php">HOME</a></li>
+                    <li class="tab"><a href="addAccountC.php">ADD ACCOUNT</a></li>
+                    <li class="tab"><a href="test.php">TRANSFER</a></li>
                     <li class="tab"><a href="">WITHDRAWAL</a></li>
                     <li class="tab"><a href="">DELETE ACCOUNT</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li class="tab" class="active"><a href="">ADD ACCOUNT</a></li>
+                    <li class="tab" class="active"><a href="homeC.php">HOME</a></li>
+                    <li class="tab"><a href="addAccountC.php">ADD ACCOUNT</a></li>
                     <li class="tab"><a href="">TRANSFER</a></li>
                     <li class="tab"><a href="">WITHDRAWAL</a></li>
                     <li class="tab"><a href="">DELETE ACCOUNT</a></li>

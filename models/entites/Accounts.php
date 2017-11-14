@@ -4,7 +4,6 @@ class Accounts{
 
   protected $id;
   protected $name;
-  protected $accountNumber;
   protected $sold;
 
   const defaultSold = 1000;
@@ -50,21 +49,9 @@ class Accounts{
      */
     public function setName($name)
     {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Set the value of Account Number
-     *
-     * @param mixed accountNumber
-     *
-     * @return self
-     */
-    public function setAccountNumber($accountNumber)
-    {
-        $this->accountNumber = $accountNumber;
+      // use of htlmspecialchars to prevent potential sql injection
+        $value = htmlspecialchars($name);
+        $this->name = $value;
 
         return $this;
     }
@@ -81,7 +68,7 @@ class Accounts{
       if(empty($sold)){
         $this->sold = self::defaultSold;
       }
-      else{
+      else if (is_int($sold)){
         $this->sold = $sold;
       }
         return $this;
@@ -109,16 +96,6 @@ class Accounts{
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Get the value of Account Number
-     *
-     * @return mixed
-     */
-    public function getAccountNumber()
-    {
-        return $this->accountNumber;
     }
 
     /**

@@ -14,9 +14,8 @@ class AccountsManager{
 
   public function insert(Accounts $account){
 
-    $req = $this->_db->preapre('INSERT INTO accounts VALUES (:name,:accountNumber,:sold)');
-    $req = $this->_db->execute(['name' => $account->getName(),
-                              'accountNumber' => $account->getAccountNumber(),
+    $req = $this->_db->prepare('INSERT INTO accounts (name,sold) VALUES (:name,:sold)');
+    $req -> execute(['name' => $account->getName(),
                               'sold' => $account->getSold()]);
   }
 
@@ -25,7 +24,7 @@ class AccountsManager{
   public function update(Accounts $account){
 
     $req = $this->_db->prepare('UPDATE accounts set sold = :sold WHERE id = :id');
-    $req = $this->_db->execute(['sold' => $account->getSold(),
+    $req -> execute(['sold' => $account->getSold(),
                                 'id' => $account->getId()]);
   }
 
@@ -34,7 +33,7 @@ class AccountsManager{
   public function getAllAccounts(){
 
     $req = $this->_db->query('SELECT * FROM accounts');
-    $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Accounts', array(array('id','name','accountNumber','sold')));
+    $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Accounts', array(array('id','name','sold')));
     $accounts = $req->fetchAll();
     return $accounts;
 
@@ -46,7 +45,7 @@ class AccountsManager{
 
     $req = $this->_db->prepare('SELECT * FROM accounts WHERE id = :id' );
     $req->execute(["id" => $id]);
-    $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Accounts', array('id','name','accountNumber','sold'));
+    $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Accounts', array(array('id','name','sold')));
     $account = $req->fetch();
     return $account;
   }
