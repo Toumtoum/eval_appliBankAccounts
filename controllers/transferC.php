@@ -6,9 +6,6 @@ include 'headerC.php';
 
 // @@@@@@@@@@@@@@@@@@@@ SCRIPT @@@@@@@@@@@@@@@@@@@@@@@@@
 
-// retreiving all accounts in database
-$accounts = $manager->getAllAccounts();
-
 if (isset($_POST['transfer']) && !empty($_POST['from']) && !empty($_POST['to']) && !empty($_POST['amount'])){
 
   if ($_POST['from'] == $_POST['to']){
@@ -25,8 +22,13 @@ if (isset($_POST['transfer']) && !empty($_POST['from']) && !empty($_POST['to']) 
     $creditor->credit($_POST['amount']);
     $manager->update($creditor);
 
+    header('location:homeC.php');
+
   }
 }
+
+// retreiving all accounts in database
+$accounts = $manager->getAllAccounts();
 
 include PATH .'/views/transfer.php';
 
