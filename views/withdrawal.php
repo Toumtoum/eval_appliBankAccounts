@@ -17,7 +17,7 @@
                 <input placeholder="" id="amount" name="amount" type="number" class="validate">
                 <label for="amount">AMOUNT</label>
             </div>
-            <input type="submit" name="withdraw" class="waves-effect waves-light btn" name="WITHDRAW">
+            <input type="submit" name="withdraw" class="waves-effect waves-light btn" value="WITHDRAW">
         </form>
     </div>
 </main>
