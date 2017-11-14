@@ -6,7 +6,7 @@ $( document ).ready(function(){
   setNavigation();
 });
 
-// function used to unable header menu to be dynamic in MVC environement
+// function used to make header menu dynamic in MVC environement
 
 function setNavigation(){
   var path = window.location.pathname;

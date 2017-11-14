@@ -63,3 +63,8 @@ th, td {
     padding-bottom: 20px;
     color: #407a56;
 }
+
+.error {
+    color: red;
+    text-align: center;
+}

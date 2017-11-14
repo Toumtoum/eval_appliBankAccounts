@@ -18,11 +18,17 @@ if (isset($_POST['transfer']) && !empty($_POST['from']) && !empty($_POST['to']) 
     $manager->update($debitor);
 
     // create an instance of debitor object and update his Sold
+    if ($debitor->debit($_POST['amount'])){
     $creditor = $manager->getAccount($_POST['to']);
     $creditor->credit($_POST['amount']);
     $manager->update($creditor);
-
     header('location:homeC.php');
+    }
+
+      else {?>
+        <div class="error"><p>OPERATION DENIED</p></div>
+      <?php }
+
 
   }
 }
