@@ -11,7 +11,7 @@ $accounts = $manager->getAllAccounts();
 
 if (isset($_POST['transfer']) && !empty($_POST['from']) && !empty($_POST['to']) && !empty($_POST['amount'])){
 
-  if ($_POST['from']==$_POST['to']){
+  if ($_POST['from'] == $_POST['to']){
     echo "you have to choose different accounts";
   }
   else {
@@ -26,7 +26,7 @@ if (isset($_POST['transfer']) && !empty($_POST['from']) && !empty($_POST['to']) 
     $manager->update($creditor);
 
   }
-} 
+}
 
 include PATH .'/views/transfer.php';
 
