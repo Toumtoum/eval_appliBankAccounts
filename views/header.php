@@ -27,7 +27,7 @@
             <div class="nav-content">
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="tabs tabs-transparent hide-on-med-and-down">
-                  <li class="tab" class="active"><a target="_self" href="homeC.php">HOME</a></li>
+                    <li class="tab" class="active"><a target="_self" href="homeC.php">HOME</a></li>
                     <li class="tab"><a target="_self" href="addAccountC.php">ADD ACCOUNT</a></li>
                     <li class="tab"><a target="_self" href="transferC.php">TRANSFER</a></li>
                     <li class="tab"><a target="_self" href="withdrawalC.php">WITHDRAWAL</a></li>

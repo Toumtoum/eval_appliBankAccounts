@@ -13,6 +13,7 @@ if (isset($_POST['create']) && !empty($_POST['name'])){
   $account = new Accounts($_POST);
 // Adding that object into table
   $manager->insert($account);
+  header('location:homeC.php');
 }
 
 // @@@@@@@@@@@@@@@@@@@@ FOOTER @@@@@@@@@@@@@@@@@@@@@@@@@
