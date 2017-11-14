@@ -24,7 +24,7 @@
             </div>
 
             <div class="input-field col s12">
-                <input placeholder="" id="amount" name="amount" type="text" class="validate">
+                <input placeholder="" id="amount" name="amount" type="number" class="validate">
                 <label for="amount">AMOUNT</label>
             </div>
             <input type="submit" name="transfer" class="waves-effect waves-light btn" value="TRANSFER">
