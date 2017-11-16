@@ -14,11 +14,11 @@ if (isset($_POST['transfer']) && !empty($_POST['from']) && !empty($_POST['to']) 
   else {
     // create an instance of creditor object and update his Sold
     $debitor = $manager->getAccount($_POST['from']);
-    $debitor->debit($_POST['amount']);
+    $test = $debitor->debit($_POST['amount']);
     $manager->update($debitor);
 
     // create an instance of debitor object and update his Sold
-    if ($debitor->debit($_POST['amount'])){
+    if ($test){
     $creditor = $manager->getAccount($_POST['to']);
     $creditor->credit($_POST['amount']);
     $manager->update($creditor);

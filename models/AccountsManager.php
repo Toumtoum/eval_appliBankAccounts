@@ -16,7 +16,7 @@ class AccountsManager{
 
     $req = $this->_db->prepare('INSERT INTO accounts (name,sold) VALUES (:name,:sold)');
     $req -> execute(['name' => $account->getName(),
-                              'sold' => $account->getSold()]);
+                     'sold' => $account->getSold()]);
   }
 
 // Update account (change sold of account after operation)
@@ -25,7 +25,7 @@ class AccountsManager{
 
     $req = $this->_db->prepare('UPDATE accounts set sold = :sold WHERE id = :id');
     $req -> execute(['sold' => $account->getSold(),
-                                'id' => $account->getId()]);
+                     'id' => $account->getId()]);
   }
 
 // Get all accounts and returns them into objects
